@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <style>
+     .header{
+        color:blue;
+        text-align: center;
+     }
+     *{
+        background-color:azure ;
+        
+     }
+     form{
+        width:80%;
+        margin: 70px;
+        color:black;
+        background-image:url(https://www.soenflorist.com/wp-content/uploads/2019/07/Fotolia_123731572_Subscription_Monthly_M.jpg);
+    
+     }
+     legend{
+        text-align: center;
+     }
+     fieldset{
+        margin-right: 50px;
+        margin-left:40px ;
+     }
+     .btn{
+        text-align: center;
+        text-decoration: solid;
+        font-size: large;
+        align-items: center;
+        background-color:aqua;
+        padding: 10px 100px 10px 100px;
+        margin-left: 150px;
+
+     }
+    </style>
+</head>
+<body>
+    <h1 class="header">APPLICATION FORM</h1>
+    <form action="./submitted.html">
+    <fieldset>
+        <legend>Personal Details:</legend>
+    <label for="text">User Name:</label>
+    <input type="text" placeholder="Enter Your Fullname" required>
+    <br><br>
+    <label for="email">Email Id:</label>
+    <input type="email" placeholder="Enter Your Mail id" required pattern="(?=.*\d)(?=.*[@]">
+    <br><br>
+    <label for="password">Password:</label>
+  <!-- <input type="password" placeholder="Enter Your Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?.*[@#$%^&*!]).{8,}" title="password must contain atleast one number,atleast one special character,lower and uppercase and it should be atleast 8 or more characters">-->
+  <input type="password" placeholder="Enter Your Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*!]).{8,}" title="Password must contain atleast one number, atleast one special character, lower and uppercase and it should be atleast 8 or more characters">
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>Select Your Gender:</legend>
+        <div>
+        <input type="radio" name="gender" required value="1">Male
+        <br>
+        <input type="radio" name="gender" value="2">Female
+        <br>
+        <input type="radio" name="gender" value="3">Other
+        <br>
+    </div>
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>Select Your Skill:</legend>
+        <input type="checkbox" name="chechbox">C
+        <br>
+        <input type="checkbox" name="chechbox">Python
+        <br>
+        <input type="checkbox" name="chechbox">C#
+        <br>
+        <input type="checkbox" name="chechbox">HTML
+        <br>
+        <input type="checkbox" name="chechbox">Java
+        <br>
+        <input type="checkbox" name="chechbox">C++
+        <br>
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>Experience:</legend>
+        <select name="experience" id="experience">
+        <option value="select">Select</option>
+        <option value="0-1">0 to 1 year</option>
+        <option value="2-3">2 to 3 year</option>
+        <option value="3-5">3 to 5 year</option>
+        <option value="more than 5">More than 5 years</option>
+        </select>
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>Address:</legend>
+        <textarea name="address" cols="30" rows="5"></textarea>
+    </fieldset>
+    <br><br>
+    <button class="btn">Submit</button>
+    </form>
+</body>
+</html>
